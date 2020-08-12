@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30330.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssetsMonitor", "AssetsMonitor\AssetsMonitor.csproj", "{6C7CFE22-16A2-4756-AD64-9926C090E567}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssetsMonitor", "AssetsMonitor\AssetsMonitor.csproj", "{6C7CFE22-16A2-4756-AD64-9926C090E567}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssetsMonitorTest", "AssetsMonitorTest\AssetsMonitorTest.csproj", "{22EE1D81-89D2-496A-86AC-69F80B0D6DBB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{6C7CFE22-16A2-4756-AD64-9926C090E567}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C7CFE22-16A2-4756-AD64-9926C090E567}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C7CFE22-16A2-4756-AD64-9926C090E567}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22EE1D81-89D2-496A-86AC-69F80B0D6DBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22EE1D81-89D2-496A-86AC-69F80B0D6DBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22EE1D81-89D2-496A-86AC-69F80B0D6DBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22EE1D81-89D2-496A-86AC-69F80B0D6DBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

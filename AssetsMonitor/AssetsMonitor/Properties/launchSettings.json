@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "AssetsMonitor": {
+      "commandName": "Project",
+      "commandLineArgs": "PETR4 2.80 5.60"
+    }
+  }
+}
