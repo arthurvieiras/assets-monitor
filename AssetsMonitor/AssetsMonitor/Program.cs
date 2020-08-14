@@ -40,7 +40,7 @@ namespace AssetsMonitor
 
             Parameters p = new Parameters(assetName, minValue, maxValue);
             AssetService service = Container.GetService<AssetService>();
-            string result = await service.getAssetInfoAsync(p.AssetName);
+            Asset result = await service.getAssetInfoAsync(p.AssetName);
             return;
         }
 
