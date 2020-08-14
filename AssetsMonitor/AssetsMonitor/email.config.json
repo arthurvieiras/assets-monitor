@@ -4,7 +4,5 @@
   "Username": "arthurvieirasilva@gmail.com",
   "Password": "******",
   "FromEmail": "arthurvieirasilva@gmail.com",
-  "ToEmailList": [
-    "arthurvieirasilva@gmail.com"
-  ]
+  "ToEmail": "arthurvieirasilva@gmail.com"
 }

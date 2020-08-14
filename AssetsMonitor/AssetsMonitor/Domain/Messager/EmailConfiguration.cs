@@ -12,6 +12,6 @@ namespace AssetsMonitor.Domain.Messager
         public string DisplayName { get; set; }
         public string Password { get; set; }
         public string FromEmail { get; set; }
-        public List<string> ToEmailList { get; set; }
+        public string ToEmail { get; set; }
     }
 }

@@ -19,6 +19,7 @@ namespace AssetsMonitor.Services.Messager
                 || string.IsNullOrEmpty(conf.FromEmail)
                 || string.IsNullOrEmpty(conf.Password)
                 || string.IsNullOrEmpty(conf.Username)
+                || string.IsNullOrEmpty(conf.ToEmail)
                 || conf.Port == 0)
                 throw new ArgumentException("Nenhuma configuração de SMTP deve ser nula ou vazia");
             this.emailConfiguration = conf;
@@ -28,7 +29,6 @@ namespace AssetsMonitor.Services.Messager
         {
             try
             {
-                string toEmail = this.emailConfiguration.ToEmailList[0];
                 MailAddress mailAddress = null;
                 if (this.emailConfiguration.DisplayName is null)
                     mailAddress = new MailAddress(this.emailConfiguration.FromEmail);
@@ -40,7 +40,7 @@ namespace AssetsMonitor.Services.Messager
                     From = mailAddress
                 };
 
-                mail.To.Add(new MailAddress(toEmail));
+                mail.To.Add(new MailAddress(this.emailConfiguration.ToEmail));
                 mail.Subject = "AssetMonitor - " + subject;
                 mail.Body = message;
                 mail.IsBodyHtml = true;
