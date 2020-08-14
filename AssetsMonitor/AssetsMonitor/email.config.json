@@ -1,8 +1,8 @@
 {
   "Domain": "smtp.gmail.com",
-  "Port": "587",
+  "Port": 587,
   "Username": "arthurvieirasilva@gmail.com",
-  "Password": "**********",
+  "Password": "******",
   "FromEmail": "arthurvieirasilva@gmail.com",
   "ToEmailList": [
     "arthurvieirasilva@gmail.com"

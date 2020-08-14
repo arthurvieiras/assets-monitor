@@ -2,7 +2,7 @@
   "profiles": {
     "AssetsMonitor": {
       "commandName": "Project",
-      "commandLineArgs": "PETR4 2.80 5.60"
+      "commandLineArgs": "PETR4 20,20 22,20"
     }
   }
 }

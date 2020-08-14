@@ -59,5 +59,4 @@ namespace AssetsMonitor.Services.Messager
             }
         }
     }
-    }
 }

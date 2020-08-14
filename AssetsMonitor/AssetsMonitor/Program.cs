@@ -15,8 +15,8 @@ namespace AssetsMonitor
 {
     public class Program
     {
-        private const string SELL_MSG = "A ação %s atingiu o valor de venda.\n Ação: %s \nValor de venda definido: {0:0.00}\nValor atual: {0:0.00}";
-        private const string BUY_MSG = "A ação %s atingiu o valor de compra.\n Ação: %s \nValor de compra definido: {0:0.00}\nValor atual: {0:0.00}";
+        private const string SELL_MSG = "A ação {0} atingiu o valor de venda.\n Ação: {1} \nValor de venda definido: {2:0.00}\nValor atual: {3:0.00}";
+        private const string BUY_MSG = "A ação {0} atingiu o valor de compra.\n Ação: {1} \nValor de compra definido: {2:0.00}\nValor atual: {3:0.00}";
 
         public static ServiceProvider Container { get; private set; }
 
@@ -32,9 +32,14 @@ namespace AssetsMonitor
                     emailConfig = JsonSerializer.Deserialize<EmailConfiguration>(sr.ReadToEnd());
                 }
             }
-            catch (IOException e)
+            catch (IOException)
             {
                 Console.WriteLine("Não foi possível ler o arquivo de configuração, abortando...");
+                return;
+            }
+            catch (JsonException)
+            {
+                Console.WriteLine("Existem erros de preenchimento no arquivo de configuração, abortando...");
                 return;
             }
 
@@ -81,9 +86,9 @@ namespace AssetsMonitor
                 Asset result = await assetService.getAssetInfoAsync(p.AssetName);
                 if (result.Price > p.MaxValue)
                     await messagerService.sendAsync(string.Format(SELL_MSG, result.Name, result.Symbol, p.MaxValue, result.Price), "Sujestão de venda");
-                if (result.Price > p.MinValue)
+                if (result.Price < p.MinValue)
                     await messagerService.sendAsync(string.Format(BUY_MSG, result.Name, result.Symbol, p.MaxValue, result.Price), "Sujestão de compra");
-                Thread.Sleep(1000);
+                Thread.Sleep(10 * 1000);
             }            
         }
 
