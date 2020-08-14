@@ -1,7 +1,7 @@
 # Assets Monitor
 
-This project was developed as a test for a job interview and there for is not production ready.
-It's pourpouse is to recover information about a asset (e.g. PETR4) from brasilian market and send an email if it is above MAX_VALUE or below MIN_VALUE parameters.
+This project was developed as a test for a job interview and therefor is not production ready.
+It's pourpouse is to recover information about a asset (e.g. PETR4) from brasilian market and send an email if it is above MAX_VALUE, or below MIN_VALUE parameters.
 
 ## Configuration files
 
