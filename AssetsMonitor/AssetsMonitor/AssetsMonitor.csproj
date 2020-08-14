@@ -9,4 +9,10 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.7" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="email.config.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
